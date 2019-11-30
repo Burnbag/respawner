@@ -16,7 +16,13 @@ module.exports.run = async (bot, message, args) => {
         limit: arg[0]
       });
       //console.log(fetched.size + ' messages found, deleting...');
-      message.channel.sendMessage("Pobrisal sam ti `" + fetched.size + "` poruka/e");
+      let mess;
+      if (fetched.size === 1) {
+        mess = "poruku";
+      } else if (fetched.size >= 2) {
+        mess = "poruke";
+      }
+      message.channel.sendMessage("Pobrisal sam ti `" + fetched.size + mess);
       message.channel.bulkDelete(fetched)
         .catch(error => message.channel.send(`Error: ${error}`));
     }
