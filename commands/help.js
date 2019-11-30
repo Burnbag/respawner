@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
     message.delete();
     var embed = new Discord.RichEmbed()
     .setColor("#3780df")
-    .setTitle("Komande za respawnera")
+    .setTitle(`Komande za ${config.ime}-a`)
     .addField(prefix + "help", "Pokazuje sve komande")
     .addField(prefix + "modhelp", "Komande za MODERATORE")
     .addField(prefix + "serverinfo", "Server info")

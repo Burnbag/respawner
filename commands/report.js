@@ -19,7 +19,7 @@ module.exports.run = async (bot, message, args) => {
     if(!reportschannel) return message.channel.send("Nemrem nać kanal `reports`");
 
 
-    message.delete().catch(O_o=>{});
+    message.delete().catch(a=>{});
     reportschannel.send(reportEmbed);
 
 }
