@@ -19,8 +19,10 @@ module.exports.run = async (bot, message, args) => {
       let mess;
       if (fetched.size === 1) {
         mess = "poruku";
-      } else if (fetched.size >= 2) {
+      } else if (fetched.size >= 2 && fetched.size < 5) {
         mess = "poruke";
+      } else if (fetched.size >= 5) {
+        mess = "poruka"
       }
       message.channel.sendMessage("Pobrisal sam ti `" + fetched.size + "` " + mess);
       message.channel.bulkDelete(fetched)
