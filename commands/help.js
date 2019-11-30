@@ -9,7 +9,6 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#3780df")
     .setTitle(`Komande za ${config.ime}-a`)
     .addField(prefix + "help", "Pokazuje sve komande")
-    .addField(prefix + "modhelp", "Komande za MODERATORE")
     .addField(prefix + "serverinfo", "Server info")
     .addField(prefix + "botinfo", "Bot info")
     .addField(prefix + "prefix", "Pokazuje koji je prefix/komanda za bot-a")
