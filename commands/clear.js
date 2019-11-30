@@ -22,7 +22,7 @@ module.exports.run = async (bot, message, args) => {
       } else if (fetched.size >= 2) {
         mess = "poruke";
       }
-      message.channel.sendMessage("Pobrisal sam ti `" + fetched.size + mess);
+      message.channel.sendMessage("Pobrisal sam ti `" + fetched.size + "`" + mess);
       message.channel.bulkDelete(fetched)
         .catch(error => message.channel.send(`Error: ${error}`));
     }
