@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
             clearInterval(interval);
         }
         message.channel.sendMessage("Ok boomer!");
-    }, 500); 
+    }, 1); 
 }
 
 module.exports.help = {
