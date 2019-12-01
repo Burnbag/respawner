@@ -2,9 +2,10 @@ const Discord = require("discord.js");
 const config = require('../config.json');
 
 module.exports.run = async (bot, message, args) => {
+  
   let randomanketa = Math.floor(Math.random() * 2 + 1);
   message.delete()
-  //message.channel.sendMessage("Random odabir PISMA ili GLAVE")
+
   if (randomanketa === 1) {
     var embed = new Discord.RichEmbed()
       .setColor("#3780df")
