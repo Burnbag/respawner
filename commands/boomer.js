@@ -7,17 +7,14 @@ module.exports.run = async (bot, message, args) => {
     if (!message.member.roles.has(modrole.id)) {
       return message.reply("Nemaš dozvolu za ovu komandu !");
     }
-    var timesRun = 0;
-    var boomerCmdRunNumber = 5;
-    var interval = setInterval(function(){
-        timesRun += 1;
-        if(timesRun === boomerCmdRunNumber){
-            clearInterval(interval);
-        }
-        message.channel.sendMessage("Ok boomer!");
-    }, 500); 
+    message.channel.send({embed: { 
+    color: 16777215, description:'', 
+    image:  {
+        url: "https://media.giphy.com/media/JOWjrrUkPwo7VZeZdK/giphy.gif"
+    }
+}});
 }
 
 module.exports.help = {
-    name: "okboomer"
+    name: "boomer"
 }
