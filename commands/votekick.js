@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const config = require('../config.json');
 
 module.exports.run = async (bot, message, args) => {
-    let kickMember = message.guild.member(message.mentions.users.first());
+    /*let kickMember = message.guild.member(message.mentions.users.first());
     if (!kickMember) {
       return message.reply("Ovaj user nije važeći !");
     }
@@ -19,7 +19,8 @@ module.exports.run = async (bot, message, args) => {
           message.reply(`${member.user.username} je uspješno izbačen !`);
         }).catch(console.error);
       }
-    });
+    });*/
+    message.reply('Ova funkcija trenutačno nije dostupna!');
 }
 
 module.exports.help = {
