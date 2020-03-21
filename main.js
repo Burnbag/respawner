@@ -12,24 +12,17 @@ fs.readdir("./commands/", (err, files) => {
 
   let jsfile = files.filter(f => f.split(".").pop() === "js")
   if(jsfile.length <= 0){
-    console.log("Nema komandi!");
     return;
   }
 
   jsfile.forEach((f, i) =>{
     let props = require(`./commands/${f}`);
-    console.log("-----> KOMANDA SPREMNA | " + config.prefix +  props.help.name);
     bot.commands.set(props.help.name, props);
   });
 
 });
 
 bot.on('ready', () => {
-  console.log("______________________________________________");
-  console.log("");
-  console.log("-----> POKRENUT | " + config.ime + " |");
-  console.log(`-----> ${bot.user.username} je online na ${bot.guilds.size} servera!`);
-  console.log("______________________________________________");
   bot.user.setPresence({
     status: 'online',
     game: {
