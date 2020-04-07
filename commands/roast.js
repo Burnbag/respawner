@@ -38,7 +38,8 @@ module.exports.run = async (bot, message, args) => {
         'Tolko si ružan da kad bi instaliral Antivirus na komp počel bi brisat tvoje slike.',
         'Tolko si debel da ni Uganda Knuckles nije mogal nac da wae oko tebe.',
         'Tolko si ružan da i slijepi ljudi plaču kad te vide.',
-        'Tolko si ružan da ti je i Hello Kitty rekla doviđenja.'
+        'Tolko si ružan da ti je i Hello Kitty rekla doviđenja.',
+        'Mama ti se kupa obučena.'
     ];
 
     let randomNumber = Math.floor(Math.random() * roasts.length);

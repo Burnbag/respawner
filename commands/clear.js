@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, args) => {
       } else if (fetched.size >= 5) {
         mess = "poruka"
       }
-      message.channel.sendMessage("Pobrisal sam ti `" + fetched.size + "` " + mess);
+      //message.channel.sendMessage("Pobrisal sam ti `" + fetched.size + "` " + mess);
       message.channel.bulkDelete(fetched + 1)
     }
     purge();
