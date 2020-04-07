@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
     let cont = message.content.slice(prefix.length).split(" ");
     let arg = cont.slice(1);
     async function purge() {
-      message.delete();
+      //message.delete();
       if (isNaN(arg[0])) {
         message.channel.send('Koristi broj kao argument. Napiši: prefix `' + prefix + '` onolko kolko oćeš obrisat');
         return;
@@ -25,7 +25,7 @@ module.exports.run = async (bot, message, args) => {
         mess = "poruka"
       }
       message.channel.sendMessage("Pobrisal sam ti `" + fetched.size + "` " + mess);
-      message.channel.bulkDelete(fetched)
+      message.channel.bulkDelete(fetched + 1)
     }
     purge();
   
