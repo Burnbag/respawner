@@ -3,10 +3,10 @@ const config = require('../config.json');
 
 module.exports.run = async (bot, message, args) => {
     
-    let modrole = message.guild.roles.find("name", "VIP");
-    if (!message.member.roles.has(modrole.id)) {
-      return message.reply("Nemaš dozvolu za ovu komandu !");
-    }
+    // let modrole = message.guild.roles.find("name", "VIP");
+    // if (!message.member.roles.has(modrole.id)) {
+    //   return message.reply("Nemaš dozvolu za ovu komandu !");
+    // }
     message.channel.send({embed: { 
     color: 16777215, description:'', 
     image:  {
